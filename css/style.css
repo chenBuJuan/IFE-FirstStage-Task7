@@ -15,7 +15,7 @@ header .banner-left{
     text-align: center;
     
     position: relative;
-    left: 100px;
+    left: 7%;
     
     background: url(../images/icon-1.png) no-repeat left;
     background-size: 16% 50%;
@@ -33,7 +33,7 @@ header nav{
     display: inline-block;
     
     position: relative;
-    left: 450px;
+    left: 35%;
     top: -3px;
 }
 header nav ul{
@@ -71,16 +71,16 @@ header nav ul li:nth-child(1):hover~.move{
     left: 40px;
 }
 header nav ul li:nth-child(2):hover~.move{
-    left: 106px;
+    left: 104px;
 }
 header nav ul li:nth-child(3):hover~.move{
-    left: 175px;
+    left: 170px;
 }
 header nav ul li:nth-child(4):hover~.move{
-    left: 242px;
+    left: 234px;
 }
 header nav ul li:nth-child(5):hover~.move{
-    left: 309px;
+    left: 299px;
 }
 header .banner-right{
     font-size: 14px;
@@ -93,7 +93,7 @@ header .banner-right{
     cursor: pointer;
     
     position: relative;
-    left: 500px;
+    left: 35%;
     top: -3px;
     
     background: url(../images/icon-2.jpg) no-repeat left;
@@ -117,7 +117,7 @@ header .banner-right:hover .move{
     width: 100%;
     height: 650px;
     background-image: url(../images/pic01.jpg);
-    background-size: cover;
+    background-size: 100% auto;
 }
 #section-1 .mes{
     position: absolute;
@@ -218,13 +218,11 @@ header .banner-right:hover .move{
 #section-4{
     width: 100%;
     height: 300px;
+    padding-top: 80px;
+    box-sizing: border-box;
     text-align: center;
     background: url(../images/pic02.jpg);
     background-size: cover;
-}
-#section-4 .mes{
-    position: relative;
-    top: 80px;
 }
 #section-4 .mes p{
     color: #fff;
@@ -241,7 +239,7 @@ header .banner-right:hover .move{
     display: inline-block;
     width: 30px;
     height: 20px;
-    margin: 10px;
+    margin-top: 10px;
     border-top: 2px solid #fff;
     
     -webkit-transition: width 0.4s ease-in-out;
@@ -252,23 +250,22 @@ header .banner-right:hover .move{
     width: 300px;
 }
 #section-4 .options{
-    position: relative;
-    top: 130px;
-    font-size: 0;
+    height: 36px;
 }
-#section-4 .options input[type="radio"]{
+#section-4 input[type="radio"]{
     width: 240px;
     height: 36px;
     margin: 0 10px;
-    display: inline-block;
-    opacity: 0;
     cursor: pointer;
+    opacity: 0;
     position: relative;
-    z-index: 100;
+    top: 47px;
+    z-index: 10;
 }
 #section-4 .options .select{
     width: 240px;
     height: 36px;
+    margin: 0 10px;
     
     font-size: 14px;
     line-height: 36px;
@@ -276,44 +273,48 @@ header .banner-right:hover .move{
     color: #B3B3B3;
     
     display: inline-block;
+    position: relative;
     
     box-sizing: border-box;
     border: 1px solid #C6B3AF;
     
     background: url(../images/icon-7.png) no-repeat 210px 8px,#fff;
     background-size: 20px;
-    
-    position: absolute;
-    z-index: 50;
+}
+#section-4 .options .select:last-of-type{
+    visibility: hidden;
 }
 #section-4 .options .select span{
     margin-left: 10px;
 }
-#section-4 .options .select:nth-of-type(1){
-    left: 175px;
-}
-#section-4 .options .select:nth-of-type(2){
-    left: 435px;
-}
-#section-4 .options .select:nth-of-type(3){
-    left: 695px;
-}
 #section-4 .options .select .option{
     width: 240px;
     background-color: #E3E3E5;
-    position: relative;
-    left: -2px;
-    top: -2px;
+    position: absolute;
+    z-index: 10;
     display: none;
+    left: -2px;
+    top: 34px;
 }
-#section-4 .options input[type="radio"]:checked+.select{
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select,
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select{
+    top: -1px;
+}
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select-1{
     border: 2px solid #AE7271;
     border-bottom-width: 0;
 }
-#section-4 .options input[type="radio"]:checked+.select .option{
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select-1 .option{
     display: block;
 }
-#section-4 .options input[type="radio"]:nth-of-type(3):checked+.select{
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select-2{
+    border: 2px solid #AE7271;
+    border-bottom-width: 0;
+}
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select-2 .option{
+    display: block;
+}
+#section-4 input[type="radio"]:nth-of-type(3):checked~.options .select-3{
     border: 1px solid #C6B3AF;
 }
 #section-4 .options .select .option ul{
@@ -330,30 +331,34 @@ header .banner-right:hover .move{
     text-align: left;
     padding-left: 40px;
     list-style: none;
+    cursor: pointer;
 }
 #section-4 .options .select .option ul li:hover{
     background: url(../images/icon-8.png) no-repeat 10px 8px,#BF4E48;
     background-size: 20px;
     color: #fff;
 }
-#section-4 .options input[type="submit"]{
+#section-4 input[type="submit"]{
     width: 240px;
     height: 36px;
+    line-height: 36px;
     font-size: 16px;
-    background-color: #BE4F48;
+    margin: 0 10px;
     border: 0;
     outline: 0;
+    background-color: #BE4F48;
     color: #fff;
     letter-spacing: 30px;
+    display: inline-block;
+    cursor: pointer;
     position: relative;
-    top: -12px;
-    left: 10px;
+    top: 36px;
     
     -webkit-transition: background-color 0.4s ease-in-out;
     -moz-transition: background-color 0.4s ease-in-out;
     transition: background-color 0.4s ease-in-out;
 }
-#section-4 .options input[type="submit"]:hover{
+#section-4 input[type="submit"]:hover{
     background-color: #E31212;
     border-radius: 3px;
 }
@@ -380,6 +385,7 @@ header .banner-right:hover .move{
 }
 #section-5 .cell .img img{
     height: 300px;
+    cursor: pointer;
 }
 #section-5 .cell .mes{
     width: 100%;
@@ -411,7 +417,7 @@ header .banner-right:hover .move{
     height: 560px;
 }
 #section-6 .left{
-    width: 850px;
+    width: 68%;
     height: 560px;
     float: left;
     position: relative;
@@ -453,11 +459,12 @@ header .banner-right:hover .move{
     border-style: solid;
     border-color: transparent #fff transparent transparent;
     top: 250px;
-    left: 790px;
+    left: 100%;
+    margin-left: -60px;
 }
 #section-6 .right{
     height: 560px;
-    margin-left: 850px;
+    margin-left: 68%;
     text-align: center;
 }
 #section-6 .right .wrapper{
@@ -569,14 +576,14 @@ header .banner-right:hover .move{
     height: 520px;
 }
 #section-7 .wrapper{
-    width: 850px;
+    width: 68%;
     height: 520px;
     float: left;
     font-size: 0;
 }
 #section-7 .wrapper .cell{
     display: inline-block;
-    width: 425px;
+    width: 50%;
     height: 520px;
     font-size: 20px;
     text-align: center;
@@ -655,11 +662,11 @@ header .banner-right:hover .move{
     border-color: transparent transparent transparent #fff;
     border-style: solid;
     top: 240px;
-    left: 425px;
+    left: 100%;
 }
 #section-7 .img{
     height: 520px;
-    margin-left: 850px;
+    margin-left: 68%;
     background: url(../images/pic08.jpg) no-repeat;
     background-size: cover;
 }
@@ -791,7 +798,7 @@ header .banner-right:hover .move{
     background-color: #33363F;
 }
 #section-9 .mes{
-    width: 700px;
+    width: 100%;
     height: 150px;
     color: #F7F8FC;
     display: inline-block;
@@ -804,7 +811,7 @@ header .banner-right:hover .move{
     font-size: 14px;
 }
 #section-9 .text{
-    width: 700px;
+    width: 100%;
     height: 40px;
     display: inline-block;
     font-size: 0;
@@ -835,10 +842,10 @@ header .banner-right:hover .move{
     transition: background-color 0.4s ease-in-out;
 }
 #section-9 .text input[type="submit"]:hover{
-    background-color: #30303A;
+    background-color: #5E5E68;
 }
 #section-9 .icon{
-    width: 700px;
+    width: 100%;
     height: 50px;
     color: #fff;
     font-size: 30px;
@@ -851,6 +858,7 @@ header .banner-right:hover .move{
     width: 50px;
     height: 50px;
     line-height: 50px;
+    vertical-align: middle;
     margin: 0;
     cursor: pointer;
     
@@ -893,5 +901,5 @@ footer .back a{
     transition: color 0.4s ease-in-out;
 }
 footer .back a:hover{
-    color: #E44F4B;
+    color: #75757F;
 }
