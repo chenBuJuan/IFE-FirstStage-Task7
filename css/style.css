@@ -770,6 +770,7 @@ header .banner-right:hover .move{
     border: 0;
     outline: 0;
     background-color: #E3E3E3;
+    resize:none;
 }
 #section-8 .right input[type="submit"]{
     width: 620px;
