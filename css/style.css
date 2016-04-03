@@ -100,12 +100,7 @@ header .banner-right{
     cursor: pointer;
     
     position: relative;
-<<<<<<< HEAD
-    left: 40%;
-    top: -3px;
-=======
     left: 50%;
->>>>>>> origin/gh-pages
     
     background: url(../images/icon-2.jpg) no-repeat left;
     background-size: 15px 18px;
