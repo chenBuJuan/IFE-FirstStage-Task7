@@ -413,8 +413,8 @@ header .banner-right:hover .move{
 }
 #section-5 .cell:nth-child(2)>.mes p:first-child{
     font-size: 24px;
+    text-indent: 30px;
     letter-spacing: 30px;
-    text-indent: 15px;
 }
 #section-5 .cell:nth-child(2)>.mes p:last-child{
     margin: 0;
